@@ -1,17 +1,14 @@
 package com.escom.dualsimplex;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import static com.escom.dualsimplex.Relations.*;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int[] z = {5,3,1};
+        int[][] a = {{2,1,4},{-8,-7,0},{1,5,2}};
+        int[] b = {3,-6,5};
+        Relations[] relations = {LT, GT, EQ};
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        new DualSimplex(true, z, a, b, relations);
     }
 }
